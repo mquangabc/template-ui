@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 import { useState } from "react";
 import { CartDrawer } from "../cart/cart-drawer";
 
@@ -21,7 +20,6 @@ export default function Home() {
         Mở giỏ hàng
       </button>
       <CartDrawer isOpen={open} onClose={() => setOpen(false)} />
-      <Welcome />
     </>
   );
 }
