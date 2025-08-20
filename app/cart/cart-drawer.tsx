@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export function CartDrawer({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
   const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
@@ -31,7 +37,10 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
         </div>
         <div className="px-4 py-3">
           <div className="bg-green-100 h-2 rounded">
-            <div className="bg-green-500 h-full rounded" style={{ width: "70%" }} />
+            <div
+              className="bg-green-500 h-full rounded"
+              style={{ width: "70%" }}
+            />
           </div>
           <p className="text-xs text-green-700 text-center mt-1">
             $200.00 away from Free Product
@@ -90,7 +99,8 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <input type="checkbox" className="accent-green-600" />
           </div>
           <p className="text-xs text-gray-500 mt-1">
-            Perfect for any occasion, our high-quality wrapping paper adds a touch of sophistication to your gifts.
+            Perfect for any occasion, our high-quality wrapping paper adds a
+            touch of sophistication to your gifts.
           </p>
         </div>
         <div className="px-4 py-3 border-t">
@@ -138,8 +148,22 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               <text x="70" y="16" fontSize="16">
                 🦌
               </text>
-              <line x1="16" y1="8" x2="50" y2="8" stroke="gold" strokeWidth="2" />
-              <line x1="16" y1="8" x2="70" y2="8" stroke="gold" strokeWidth="2" />
+              <line
+                x1="16"
+                y1="8"
+                x2="50"
+                y2="8"
+                stroke="gold"
+                strokeWidth="2"
+              />
+              <line
+                x1="16"
+                y1="8"
+                x2="70"
+                y2="8"
+                stroke="gold"
+                strokeWidth="2"
+              />
             </svg>
             <div className="santa-trail">
               {Array.from({ length: 12 }).map((_, i) => (
@@ -152,4 +176,3 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
     </div>
   );
 }
-
